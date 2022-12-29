@@ -1,0 +1,519 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+body{
+    background: rgb(19, 17, 17);
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;    overflow: hidden;
+}
+#back{
+    height: 97vh;
+    position: relative;
+    border-radius: 20px;
+}
+#main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: fit-content;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+}
+#date{
+    position: absolute;
+    top: 15%;
+    color: white;
+    font-size: 1rem;
+}
+#heure{
+    position: absolute;
+    top: 18%;
+    color: rgba(255, 255, 255, 0.747);
+    text-decoration: double;
+    font-size: 3.8rem;
+}
+#barre{
+    position: absolute;
+    bottom: 15px;
+    width: 45%;
+    height: 7px;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+}
+#cadena{
+    height: 15px;
+    position: absolute;
+    top: 10%;
+}
+#head{
+    position:absolute;
+    top: 5px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 94%;
+    height: 15px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+#heurehead{
+    margin-left: 5px;
+    font-size: 0.8rem;
+}
+#island{
+    width: 40%;
+    height: 20px;
+    background: black;
+    border-radius: 10px;
+}
+#mdpscreen{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -1000%;
+    /* background: rgba(151, 146, 146, 0.164); */
+    backdrop-filter: blur(10px) contrast(100%);
+    -webkit-backdrop-filter: blur(10px) contrast(100%);
+    /* transition: 0.1s ease; */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+#btnsections{
+    position: absolute;
+    top: 30%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows:  1fr 1fr 1fr 1fr ;
+    justify-content: center;
+    /* align-items: center;  */
+    /* row-gap: 10px;
+    column-gap: 10px; */
+    /* background: red; */
+    
+}
+
+.btnmdp{
+    color: white;
+    width: 55px;
+    height: 55px;
+    background: rgba(255, 255, 255, 0.144);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    margin:10px;
+    font-size: 150%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+}
+@media (max-height:519px) {
+    .btnmdp{
+        width: 40px;
+        height: 40px;
+    }
+}
+#code{
+    position: absolute;
+    top: 20%;
+}
+#mdp{
+    display: flex;
+    position: relative;
+    transition: 1s;
+}
+.anim{
+animation: shake 0.45s ease;}
+@keyframes shake {
+    0%{
+        left: 15px;
+    }
+    20%{
+       left: -15px;
+    }
+    40%{
+        left:15px;
+    }
+    60%{
+        left:-15px;
+    }
+    80%{
+        left:15px;
+    }
+    100%{
+        left:0px;
+    }
+}
+.bulle{
+    width: 6px;
+    height: 6px;
+    border-radius: 100px;
+    border: 2px solid white;
+    margin: 10px;
+    
+}
+#annuler{
+    position: absolute;
+    bottom: 10% ;
+    color: white;
+    right: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+#appsection{
+    width: 200%;
+    height: 100%;
+    /* background: rgba(255, 0, 0, 0.397); */
+    position: absolute;
+    border-radius: 20px;
+    top: -500%;
+    left: 0;
+    transition: 0.2s linear;
+}
+#bottomapp{
+    width: 90%;
+    position: absolute;
+    bottom: 10px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.199);
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 25px ;
+    backdrop-filter: blur(30px) contrast(100%);
+    -webkit-backdrop-filter: blur(30px) contrast(100%);
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    justify-content: space-evenly;
+    display: none;
+}
+#swipbulle{
+    width:  20%;
+    height: 15px;
+    border-radius: 25px ;
+    backdrop-filter: blur(30px) contrast(100%);
+    -webkit-backdrop-filter: blur(30px) contrast(100%);
+    background: rgba(255, 255, 255, 0.199);
+    position: absolute;
+    bottom: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    display: none;
+
+}
+.bswp{
+ width: 7px;
+ height: 7px;
+ border-radius: 1000px;
+ background: rgba(255, 255, 255, 0.35);
+ transition: 0.2s linear;
+}
+#lesapps{
+position: relative;
+top: 10%;
+display: flex;
+justify-content: space-evenly;
+flex-wrap: wrap;
+/* background: red; */
+width: 50%;
+float: right;
+}
+.app4contain{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 18px;
+
+}
+#appsection img{
+    cursor: pointer;
+}
+#link{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow-x: hidden;
+    background: #fffcfc;
+    display: none;
+    padding-top: 20px;
+}
+iframe{
+    overflow: hidden;
+border-radius: 20px;
+
+}
+#calculette{
+    position: absolute;
+    bottom: 15%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows:  1fr 1fr 1fr 1fr 1fr ;
+    justify-content: center;
+    /* align-items: center;  */
+    row-gap:    10px;
+    column-gap: 10px;
+    /* background: red; */
+    width: 90%;
+
+}
+.btncalc{
+    color: white;
+    width: 55px;
+    height: 55px;
+    background:#313131;
+    display: flex;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    /* margin:10px; */
+    font-size: 150%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+    
+    
+}
+#calcontain{
+    width: 100%;
+    height: 100%;
+    background: black;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    display: none;
+    border-radius: 20px;
+
+}
+#homebtn{
+    position: absolute;
+    bottom: 15px;
+    width: 45%;
+    height: 5px;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+    display: none;
+}
+#calres{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 65%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 50px;
+    color: white;
+    padding-right: 30px;
+
+}
+@media (max-height:500px) {
+    .btncalc{
+        width: 35px;
+        height: 35px;
+    }
+    #calres{
+       
+        font-size: 30px;
+    
+    }
+}
+@media (min-height:740px) {
+    #calculette{
+        bottom: 21%;
+    }
+}
+#bottomapp img {
+cursor: pointer;}
+h4{
+    font-size: 9px;
+    color: white;
+    margin-top: 4px;
+}
+#app{
+    width: 23%;
+    /* background: red; */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#message{
+    width: 100%;
+    height: 100%;
+    background: black;
+    position: absolute;
+    border-radius: 20px;
+    display: none;
+}
+#modifmes{
+    position: absolute;
+    display: flex;
+    color: #0d82fd;
+    width: 96%;
+    top: 6%;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-left: 10px;
+    margin-right: 10px; */
+    left: 50%;
+    transform: translate(-50%);
+}
+#message h2{
+    color: white;
+    top: 10%;
+    position: absolute;
+    left: 2%;
+}
+#shearch{
+    width: 95%;
+    background: #1C1C1E;
+    top:  17%;
+    position: absolute;
+    border-radius: 7px;
+    left: 50%;
+    transform: translate(-50%);
+    padding-left:5px;
+}
+ #aucmess{
+    color: white;
+    top: 30%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+ }
+ #video{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* display: none; */
+ }
+ #camera{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: black;
+    border-radius: 10px;
+    display: none;
+    
+ }
+ #phtbtn{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: solid 3px white;
+    position: absolute;
+    bottom: 10%;
+    display: flex;
+    left: 50%;
+    transform: translate(-50%);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+ }
+ #phtbtn div{
+    width: 95%;
+    height: 95%;
+    background: white;
+    border-radius: 100%;
+ }
+ #txtphoto{
+    width: 175%;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 25%;
+    /* background: red; */
+    transition: 0.5s linear;
+ }
+ #txtphoto h4{
+    cursor: pointer;
+
+ }
+ #previewphoto{
+    width: 20%;
+    position: absolute;
+    bottom: 11%;
+    left: 2%;
+   height: 7%;
+ }
+ #pellicule{
+    width: 100%;
+    height: 100%;
+    background: black;
+    position: absolute;
+    top: 0;
+    border-radius: 20px;
+    display: none;
+ }
+ #pelliculebottom{
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    background-color:#3d3c3c7e;
+    bottom: 0;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    padding-top: 10px;
+ }
+ #pelliculebottom img{
+    height:  60%;
+ }
+ #pellicule h3{
+position: absolute;
+top: 20%;
+left: 50%;
+color: white;
+transform: translate(-50%);
+}
+#pelliculephoto{
+    display: flex;
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    top: 10%;
+    /* background: red; */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.cv{
+    width: 31%;
+    height: 20%;
+    background: black;
+    margin: 2px;
+}
+#mobile{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background:#1C1C1E;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: none;
+
+}
