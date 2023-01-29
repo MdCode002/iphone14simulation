@@ -165,7 +165,6 @@ appsection.addEventListener("mousedown", function () {
     // //   appsection.style.left = 0 + "px";}
 
     document.removeEventListener("mousemove", mousemv);
-    document.getElementById("pose").innerHTML = currentLeft;
   });
 });
 
