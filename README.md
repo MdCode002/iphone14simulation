@@ -10,7 +10,7 @@
 <p align="center">
        <h2 align="center">Site pour utiliser le simulateur</h2>
     <b>
-      Site : https://medzo02.github.io/iphone14simulation/
+      Site : http://iphone14simu.tech/
     Le code pour utiliser l'iphone est : 0000
   </b>  
 </p>
