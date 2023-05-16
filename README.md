@@ -14,3 +14,6 @@
     Le code pour utiliser l'iphone est : 0000
   </b>  
 </p>
+## Auteur
+
+- Mouhamed Diouf : [@Medzo02](https://github.com/Medzo02)
