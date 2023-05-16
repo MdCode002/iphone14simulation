@@ -14,6 +14,12 @@
     Le code pour utiliser l'iphone est : 0000
   </b>  
 </p>
+<p align="center">
+       <h2 align="center">Auteur</h2>
+    <b>
+     - Mouhamed Diouf : [@Medzo02](https://github.com/Medzo02)
+  </b>  
+</p>
 ## Auteur
 
 - Mouhamed Diouf : [@Medzo02](https://github.com/Medzo02)
