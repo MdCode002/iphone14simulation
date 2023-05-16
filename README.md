@@ -20,6 +20,3 @@
      - Mouhamed Diouf : [@Medzo02](https://github.com/Medzo02)
   </b>  
 </p>
-## Auteur
-
-- Mouhamed Diouf : [@Medzo02](https://github.com/Medzo02)
