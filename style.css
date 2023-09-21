@@ -7,6 +7,9 @@
     -ms-user-select: none;
     user-select: none;
 }
+.inner::-webkit-scrollbar {
+  display: none;
+}
 body{
     background: rgb(19, 17, 17);
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;    overflow: hidden;
